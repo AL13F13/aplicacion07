@@ -2,10 +2,10 @@
 $(document).ready(function(e) {
 document.addEventListener("deviceready",function(){
 	audio=window.plugins.LowLatencyAudio;
-	audio.preloadFX('B1','audio/C.pm3',function(){},function(msg){ alert ("error" + msg);});
-	audio.preloadFX('B2','audio/D.pm3',function(){},function(msg){ alert ("error" + msg);});
-	audio.preloadFX('B3','audio/E.pm3',function(){},function(msg){ alert ("error" + msg);});
-	audio.preloadFX('B4','audio/F.pm3',function(){},function(msg){ alert ("error" + msg);});
+	audio.preloadFX('B1','audio/C.mp3',function(){},function(msg){ alert ("error" + msg);});
+	audio.preloadFX('B2','audio/D.mp3',function(){},function(msg){ alert ("error" + msg);});
+	audio.preloadFX('B3','audio/E.mp3',function(){},function(msg){ alert ("error" + msg);});
+	audio.preloadFX('B4','audio/F.mp3',function(){},function(msg){ alert ("error" + msg);});
 	
 	
 	$('#btnjugar').on('tap',function(){
