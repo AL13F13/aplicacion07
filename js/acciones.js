@@ -42,5 +42,12 @@ document.addEventListener("deviceready",function(){
 				return q.substring (1);
 				
 			}
-				}); 
+			
+			
+			
+			
+		
+	
+	}); 
 });
+
