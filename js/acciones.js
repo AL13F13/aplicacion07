@@ -2,6 +2,16 @@
 $(document).ready(function(e) {
 document.addEventListener("deviceready",function(){
 	
+	audio=window.plugins.LowLatencyAudio;
+	audio.preloadFX('B1','audio/C.pm3',function(){},function(msg){ alert ("error" + msg);});
+	audio.preloadFX('B2','audio/D.pm3',function(){},function(msg){ alert ("error" + msg);});
+	audio.preloadFX('B3','audio/E.pm3',function(){},function(msg){ alert ("error" + msg);});
+	audio.preloadFX('B4','audio/F.pm3',function(){},function(msg){ alert ("error" + msg);});
+	
+	var basedatos= window.sqlitePlugin.openDatabase({name: "coloresBD.db",createFromLocation:1});
+	cargarnombrejugador();
+	
+	
 	$('#btnconfigurar').on('tap',function(){
 		$('#txtnombre').val($('#jugador').text());
 		});
@@ -15,9 +25,9 @@ document.addEventListener("deviceready",function(){
 			cargarnombrejugador();
 			});
 	
-var basedatos= window.sqlitePlugin.openDatabase({name: "coloresBD.db",createFromLocation:1})
+
 	
-	cargarnombrejugador();
+	
 	function cargarnombrejugador ()
     {
 	    basedatos.transaction(function(ejecutar){
@@ -34,14 +44,11 @@ var basedatos= window.sqlitePlugin.openDatabase({name: "coloresBD.db",createFrom
 	
 	
 	
-	audio=window.plugins.LowLatencyAudio;
-	audio.preloadFX('B1','audio/C.pm3',function(){},function(msg){ alert ("error" + msg);});
-	audio.preloadFX('B2','audio/D.pm3',function(){},function(msg){ alert ("error" + msg);});
-	audio.preloadFX('B3','audio/E.pm3',function(){},function(msg){ alert ("error" + msg);});
-	audio.preloadFX('B4','audio/F.pm3',function(){},function(msg){ alert ("error" + msg);});
+	
 	
 	
 	$('#btnjugar').on('tap',function(){
+		alert ("dentro");
 		var pantalla =$.mobile.getScreenHeight();
 		alert ('pantalla ' + pantalla);
 		var encabezado =$('.ui-header').outerHeight();
