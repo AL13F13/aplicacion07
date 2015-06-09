@@ -15,16 +15,16 @@ document.addEventListener("deviceready",function(){
 			cargarnombrejugador();
 			});
 	
-var basedatos=window.sqlitePlugin.openDatabase({name:"coloresBD.db",createFromLocation:1})
+var basedatos= window.sqlitePlugin.openDatabase({name: "coloresBD.db",createFromLocation:1})
 	
 	cargarnombrejugador();
 	function cargarnombrejugador ()
     {
-	basedatos.transaction(function(ejecutar){
-	var sql="SELECT NombreUsuario FROM usuario";
+	    basedatos.transaction(function(ejecutar){
+	var sql="SELECT NombreUsuario FROM Usuario";
 				
 				
-    ejecutar.executesql(sql, undefined, function(ejecutar, resultado){
+    ejecutar.executeSql(sql, undefined, function(ejecutar,resultado){
 	
 	var datosjugador=resultado.rows.item(0);
 	$('#jugador').text(datosjugador.NombreUsuario);
@@ -43,14 +43,15 @@ var basedatos=window.sqlitePlugin.openDatabase({name:"coloresBD.db",createFromLo
 	
 	$('#btnjugar').on('tap',function(){
 		var pantalla =$.mobile.getScreenHeight();
+		alert ('pantalla ' + pantalla);
 		var encabezado =$('.ui-header').outerHeight();
+		alert ('encabezado ' + encabezado);
 		var pie =$('.ui-footer').outerHeight();
+		alert ('pie' + pie);
 		var contenido =$('.ui-content').outerHeight();
+		alert ('contenido' + contenido);
 		var alto=(pantalla - encabezado - pie )/2;
-		//alert ('pantalla ' + pantalla);
-		//alert ('encabezado ' + encabezado);
-		//alert ('pie' + pie);
-		//alert ('contenido' + contenido);
+			
 		
 		$('.cuadro').height(alto);
 		
@@ -79,4 +80,5 @@ var basedatos=window.sqlitePlugin.openDatabase({name:"coloresBD.db",createFromLo
 			
 }); 
 });
+
 
