@@ -1,7 +1,7 @@
 // JavaScript Document
 $(document).ready(function(e) {
 document.addEventListener("deviceready",function(){
-	var basedatos= window.sqlitePlugin.openDatabase({name: "coloresBD.db",createFromLocation:1})
+	var basedatos= window.sqlitePlugin.openDatabase({name: "coloresBD.db",createFromLocation:1});
 	cargarnombrejugador();
 	function cargarnombrejugador ()
 	{
@@ -9,7 +9,7 @@ document.addEventListener("deviceready",function(){
 			var sql="SELECT NombreUsuario FROM Usuario";
 			ejecutar.executeSql(sql,undefined,function(ejecutar,resultado){
 				var datosjugador=resultado.rows.item(0);
-				$('#jugador').text(datosjugador.NombreUsuario)
+				$('#jugador').text(datosjugador.NombreUsuario);
 			});
 		});
 	}
@@ -19,6 +19,7 @@ document.addEventListener("deviceready",function(){
 	audio.preloadFX('b3','audio/E.mp3',function(){},function(msg){alert("Error "+msg);});
 	audio.preloadFX('b4','audio/F.mp3',function(){},function(msg){alert("Error "+msg);});
 	$('#btnjugar').on('tap',function(){
+		alert ('de tr');
 		var pantalla=$.mobile.getScreenHeight();
 		var encabezado=$('.ui-header').outerHeight();
 		var pie=$('.ui-footer').outerHeight();
