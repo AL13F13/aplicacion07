@@ -9,8 +9,8 @@
   <!--grupo CSS-->
   <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
   <link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css" />
-  <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" />
-  <link rel="stylesheet" href="css/extra.css"/> 
+  <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" /> 
+  <link rel="stylesheet" href="css/extra.css" /> 
         
         
 
@@ -27,33 +27,29 @@
  <!-- Principal -->
  <div data-role="page" id="principal" >   
   <div data-role="header">
-    <h1>aplicacion07</h1>
-  </div>
-  
-  <div id="jugador">
-  <!-- aquie esta el div jugador-->
+    <h1>Aplicacion07</h1>
   </div>
 
   <div data-role="main" class="ui-content">
    <div align="center">
-    <div data-role="controlgroup" style="width:50%" data-type="vertical">
-   <a href="#tablero" id="btnjugar" class="ui-btn ui-shadow ui-btn-icon-right ui-corner-all" data-transition="fade">Jugar</a>
-   <a href="#config" id="btnconfigurar" class="ui-btn ui-shadow ui-btn-icon-right ui-corner-all" data-transition="fade">configuracion</a>
-  </div>
-  </div>
+    <div id="jugador"></div>
+    <div style="width:50%" data-role="controlgroup" data-type="vertical">
+     <a href="#tablero"  id="btnjugar" class="ui-btn" >JUGAR</a> 
+     <a href="#config"   class="ui-btn"  id="btnconfigurar">CONFIGURAR</a> 
+    </div>
+   </div>
   </div>
 
   <div data-role="footer">
-    <h1>@Sergio angel</h1>
+    <h1>@Sergio Angel</h1>
   </div>
  </div>  
  <!-- Principal -->
- 
- 
- <!-- Pagina02 -->
+  <!-- Pagina 2 -->
  <div data-role="page" id="tablero" >   
+  <div data-role="header">
   
-<div data-role="main" class="ui-content">
+  <div data-role="main" class="ui-content">
     <div id="B1" style="background-color:#69F" class="cuadro">&nbsp;</div>
     <div id="B2" style="background-color:#F63" class="cuadro">&nbsp;</div>
     <div id="B3" style="background-color:#6F9" class="cuadro">&nbsp;</div>
@@ -61,40 +57,29 @@
     
   </div>
 
-  <div data-role="footer" data-position="fixed">
-  <h3> <div id="pantalla"> pulso:</div></h3>
+  <div data-role="footer">
+    <h3><div id="pantalla">pulso:</div></h3>
   </div>
  </div>  
- <!-- Pagina02 -->
+ <!-- Pagina 2 -->
  
-  <!-- configuracion  -->
+  <!-- Pagina 3 -->
  <div data-role="page" id="config" >   
   <div data-role="header">
-    <h1>configuracion</h1>
+   <h1>Configuracion</h1>
   </div>
-  
-   
-  
- 
 
   <div data-role="main" class="ui-content">
-  <input type="text" id="txtnombre"  />
-   <div align="center">
-    <div data-role="controlgroup" style="width:50%" data-type="vertical">
-   <a href="#" id="btnguardar" class="ui-btn ui-shadow ui-btn-icon-right ui-corner-all" data-transition="fade">guardar</a>
-   
-  </div>
-  </div>
+   <div style="width:50%" align="center">
+    <input type="text" id="txtnombre" value="" >
+    <a href="#"   class="ui-btn"  id="btnguardar">GUARDAR</a>
+   </div>
   </div>
 
   <div data-role="footer">
-   <a href="#principal" id="btninicio" class="ui-btn ui-shadow ui-btn-icon-right ui-corner-all" data-transition="fade">inicio</a>
-   
+    <a href="#principal"   class="ui-btn" >INICIO</a>
   </div>
  </div>  
- <!-- configuracion -->
-
-
-
+ <!-- Pagina 3 -->
  </body>
 </html> 
